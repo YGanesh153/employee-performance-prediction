@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Performance Prediction</title>
+
+    <!-- Link CSS correctly -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Employee Performance Prediction</h2>
+
+    <form method="POST">
+
+        <label>Attendance Consistency (%)</label>
+        <input type="number" name="attendance" required>
+
+        <label>Task Completion (%)</label>
+        <input type="number" name="task_completion" required>
+
+        <label>Task Delay Rate (%)</label>
+        <input type="number" name="task_delay" required>
+
+        <label>Productive Hours</label>
+        <input type="number" name="productive_hours" required>
+
+        <label>Experience (Years)</label>
+        <input type="number" name="experience" required>
+
+        <label>Project Complexity (1–5)</label>
+        <input type="number" name="project_complexity" min="1" max="5" required>
+
+        <label>Feedback Score (1–5)</label>
+        <input type="number" name="feedback" min="1" max="5" required>
+
+        <label>Role</label>
+        <select name="role">
+            <option>Employee</option>
+            <option>HR</option>
+            <option>Manager</option>
+            <option>Team Lead</option>
+        </select>
+
+        <button type="submit">Predict Performance</button>
+    </form>
+
+    <footer>
+        ML-Based Employee Performance System
+    </footer>
+</div>
+
+</body>
+</html>
